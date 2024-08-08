@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Rohan Webpage</title>
+    <style>
+      h1{
+        color: blue;
+        font-size: 50px;
+        font-family: Arial;'
+        text-align:center;
+        
+      }
+      #office{
+        width:100%;
+        
+        height:360px;
+        object-fit:cover;
+        
+      }
+      h2{
+        font-family: Arial;
+        font-size:32px;
+        colo:red;
+        text-align:center;
+        
+      }
+      p{
+        font-family: Arial;
+        
+        /* font-size:16px; */
+        /* text-align:center; */
+        
+      }
+      #container{
+        max-width:720px;
+        margin:0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+    <h1>My projects</h1>
+    <img id="office"src="static/office_pic.jpg"
+    height="320">
+    <h2>About me</h2>
+    <p>
+    Hello I am Rohan. I am Graduate from IIT Bombay and currently working as a Research Specialist with the experience in the field of Machine Learning and Data Science. I have used various machine learning tools and libraries to build various projects. The projects that I have worked on are like Time Series forecasting to predict the future sales of Walmart using models like ARIMA, Random Forest, Xgboost and Exponential smoothing
+    </p>
+    <h2 class="text-centre mt-2 mb-4"> Projects
+    </h2>
+    <div>
+      {%for project in project%}
+      <div style="margin-bottom:16px;">
+        <h4 style="color:blueviolet"> {{project.title}}</h4>
+        <div><b>decription</b> {{project.description}}</div>
+        
+      </div>
+      {%endfor%}
+    </div>
+      <div class="text-centre">
+    <button class:"btn btn-primary btn-lg"> contact us</button>
+    </div>
+  </div>
+  </body>
+</html>
